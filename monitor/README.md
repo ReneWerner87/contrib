@@ -18,7 +18,7 @@ This middleware supports Fiber v3.
 
 ```sh
 go get -u github.com/gofiber/fiber/v3
-go get -u github.com/gofiber/contrib/v3/monitor
+go get -u github.com/ReneWerner87/contrib/v3/monitor
 ```
 
 ### Signature
@@ -48,7 +48,7 @@ import (
     "log"
 
     "github.com/gofiber/fiber/v3"
-    "github.com/gofiber/contrib/v3/monitor"
+    "github.com/ReneWerner87/contrib/v3/monitor"
 )
 
 func main() {

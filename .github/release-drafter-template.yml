@@ -43,7 +43,7 @@ version-resolver:
             - '🧹 Updates'
     default: patch
 template: |
-    Package path: `github.com/gofiber/contrib/v3/{{FOLDER}}`
+    Package path: `github.com/ReneWerner87/contrib/v3/{{FOLDER}}`
 
     $CHANGES
 

@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gofiber/contrib/v3/otelfiber"
+	"github.com/ReneWerner87/contrib/v3/otelfiber"
 	"github.com/gofiber/fiber/v3"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -29,7 +29,7 @@ import (
 	oteltrace "go.opentelemetry.io/otel/trace"
 )
 
-const instrumentationName = "github.com/gofiber/contrib/v3/otelfiber"
+const instrumentationName = "github.com/ReneWerner87/contrib/v3/otelfiber"
 
 func TestChildSpanFromGlobalTracer(t *testing.T) {
 	sr := tracetest.NewSpanRecorder()
