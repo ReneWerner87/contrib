@@ -16,6 +16,9 @@ Requires Go **1.25** and above
 
 :::
 
+**Compatible with Fiber v3.**
+
+
 ## Install
 
 :::caution
@@ -26,7 +29,7 @@ This middleware only supports Fiber **v3**.
 
 ```shell
 go get -u github.com/gofiber/fiber/v3
-go get -u github.com/gofiber/contrib/hcaptcha
+go get -u github.com/gofiber/contrib/v3/hcaptcha
 ```
 
 ## Signature
@@ -49,7 +52,7 @@ hcaptcha.New(config hcaptcha.Config) fiber.Handler
 package main
 
 import (
-    "github.com/gofiber/contrib/hcaptcha"
+    "github.com/gofiber/contrib/v3/hcaptcha"
     "github.com/gofiber/fiber/v3"
     "log"
 )
@@ -65,17 +68,17 @@ func main() {
         // Must set the secret key
         SecretKey: TestSecretKey,
     })
-	
+    
     app.Get("/api/", func(c fiber.Ctx) error {
         return c.JSON(fiber.Map{
             "hcaptcha_site_key": TestSiteKey,
         })
     })
-	
+    
     app.Post("/api/robots-excluded", func(c fiber.Ctx) error {
         return c.SendString("You are not a robot")
     }, captcha)
-	
+    
     log.Fatal(app.Listen(":3000"))
 }
 ```
